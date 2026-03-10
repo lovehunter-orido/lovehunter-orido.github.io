@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>18+ Secret Chat & Dating - Join Now</title>
+  <meta name="description" content="18+ adult chat, dating & private video calls. Join thousands of users right now!">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #e0e0ff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .age-gate {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+    }
+    .age-modal {
+      background: rgba(30,30,60,0.9);
+      border: 2px solid #ff00aa;
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(255,0,170,0.4);
+    }
+    .age-title {
+      font-size: 2.4rem;
+      color: #ff00aa;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #ff00aa;
+    }
+    .age-text {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .age-btn {
+      padding: 14px 40px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+    .yes-btn {
+      background: linear-gradient(45deg, #ff00aa, #ff4dd2);
+      color: white;
+      box-shadow: 0 0 20px rgba(255,0,170,0.6);
+    }
+    .yes-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(255,0,170,0.9);
+    }
+    .no-btn {
+      background: #333;
+      color: #aaa;
+    }
+    .no-btn:hover {
+      background: #444;
+    }
+
+    /* Main Content */
+    header {
+      background: rgba(0,0,0,0.6);
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 1px solid #ff00aa33;
+    }
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff00aa;
+      text-shadow: 0 0 20px #ff00aa;
+    }
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516321310766-66f6170c6730?w=800&q=80') center/cover;
+    }
+    .hero-content {
+      max-width: 700px;
+    }
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 20px;
+      color: #ff4dd2;
+      text-shadow: 0 0 30px #ff00aa;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #d0d0ff;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 50px;
+      font-size: 1.4rem;
+      background: linear-gradient(45deg, #ff00aa, #ff4dd2);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 0 40px rgba(255,0,170,0.7);
+      transition: all 0.4s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 0 60px rgba(255,0,170,1);
+    }
+    .features {
+      padding: 80px 20px;
+      background: rgba(20,20,50,0.6);
+      text-align: center;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+    .feature-card {
+      background: rgba(40,40,80,0.7);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid #ff00aa33;
+      transition: all 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-color: #ff00aa;
+      box-shadow: 0 0 30px rgba(255,0,170,0.4);
+    }
+    .feature-icon {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      color: #ff4dd2;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.8);
+      border-top: 1px solid #ff00aa33;
+      font-size: 0.95rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Age Gate -->
+<div class="age-gate" id="ageGate">
+  <div class="age-modal">
+    <div class="age-title">18+ ONLY</div>
+    <div class="age-text">
+      এই সাইটে শুধুমাত্র ১৮ বছর বা তার বেশি বয়সীদের জন্য।<br>
+      আপনি কি ১৮+?
+    </div>
+    <button class="age-btn yes-btn" onclick="enterSite()">হ্যাঁ, আমি ১৮+</button>
+    <button class="age-btn no-btn" onclick="leaveSite()">না</button>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="logo">Secret 18+ Chat</div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>এখনই যোগ দাও গোপন চ্যাটে</h1>
+    <p class="subtitle">হাজার হাজার ইউজারের সাথে লাইভ চ্যাট, প্রাইভেট ভিডিও কল ও ডেটিং</p>
+    <a href="#" class="cta-btn">ফ্রিতে জয়েন করো</a>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <h2 style="font-size:2.5rem; color:#ff4dd2; margin-bottom:50px;">কেন আমাদের সাথে?</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🔥</div>
+      <h3>হট ও লাইভ চ্যাট</h3>
+      <p>রিয়েল টাইমে অচেনা মানুষের সাথে কথা বলো</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎥</div>
+      <h3>প্রাইভেট ভিডিও কল</h3>
+      <p>শুধু তোমার ও তার মধ্যে – কোনো রেকর্ড নেই</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">❤️</div>
+      <h3>অ্যাডাল্ট ডেটিং</h3>
+      <p>তোমার পছন্দের মানুষ খুঁজে বের করো</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Secret 18+ Chat • 18+ Only • All Rights Reserved
+</footer>
+
+<script>
+  function enterSite() {
+    document.getElementById('ageGate').style.display = 'none';
+    // Optional: localStorage.setItem('ageVerified', 'true');
+  }
+  function leaveSite() {
+    window.location.href = 'https://www.google.com';
+  }
+
+  // Optional: যদি আগে verify করে থাকে তাহলে skip
+  // if (localStorage.getItem('ageVerified') === 'true') {
+  //   document.getElementById('ageGate').style.display = 'none';
+  // }
+</script>
+
+</body>
+</html>
