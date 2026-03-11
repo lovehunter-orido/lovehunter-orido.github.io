@@ -1,394 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ProHub – Premium HD Porn & OnlyFans Leaks</title>
-  <meta name="description" content="Exclusive OnlyFans leaks, Fansly private videos, hardcore porn in 4K. Daily updates – watch now!">
-  
-  <style>
-    :root {
-      --bg-dark: #0b0014;
-      --card-bg: rgba(18,0,38,0.94);
-      --neon-red: #ff0033;
-      --neon-purple: #aa00ff;
-      --text-light: #ffe6f0;
-      --glow: rgba(255,0,51,0.7);
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    .age-gate {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.98);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(15px);
-    }
-    .age-modal {
-      background: var(--card-bg);
-      border: 3px solid var(--neon-red);
-      border-radius: 24px;
-      padding: 70px 50px;
-      max-width: 620px;
-      width: 92%;
-      text-align: center;
-      box-shadow: 0 0 140px var(--glow);
-      animation: pulse-glow 6s infinite alternate;
-    }
-    @keyframes pulse-glow { 0% { box-shadow: 0 0 80px rgba(255,0,51,0.5); } 100% { box-shadow: 0 0 160px rgba(255,0,51,0.9); } }
-    .age-title { font-size: 5rem; color: var(--neon-red); margin-bottom: 40px; font-weight: 900; text-shadow: 0 0 50px var(--neon-red); }
-    .age-text { font-size: 1.7rem; margin-bottom: 60px; line-height: 1.6; font-weight: bold; }
-    .age-btn {
-      padding: 22px 80px;
-      font-size: 1.9rem;
-      font-weight: 900;
-      border: none;
-      border-radius: 80px;
-      cursor: pointer;
-      margin: 25px;
-      transition: all 0.5s;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-    .yes-btn {
-      background: linear-gradient(45deg, var(--neon-red), var(--neon-purple));
-      color: white;
-      box-shadow: 0 0 80px var(--glow);
-    }
-    .yes-btn:hover { transform: scale(1.18) translateY(-10px); box-shadow: 0 0 140px var(--neon-red); }
-    .no-btn { background: #1a001a; color: #999; border: 2px solid #444; }
-    .no-btn:hover { background: #220022; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Entertainment | Live Chat & Exclusive Content</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ff0040;
+            --secondary-color: #0088cc;
+            --glass-bg: rgba(0, 0, 0, 0.75);
+            --border-glow: rgba(255, 0, 64, 0.3);
+        }
 
-    header {
-      background: rgba(0,0,0,0.9);
-      padding: 35px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 2px solid rgba(255,0,51,0.4);
-    }
-    .logo {
-      font-size: 4.8rem;
-      font-weight: 900;
-      background: linear-gradient(45deg, #ff0033, #aa00ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 60px rgba(255,0,51,0.9);
-      letter-spacing: -2px;
-    }
-    .nav-categories {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-    .cat-btn {
-      padding: 14px 32px;
-      font-size: 1.3rem;
-      background: rgba(255,0,51,0.15);
-      color: white;
-      border: 1px solid rgba(255,0,51,0.5);
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.4s;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .cat-btn:hover {
-      background: linear-gradient(45deg, var(--neon-red), var(--neon-purple));
-      transform: scale(1.08) translateY(-4px);
-      box-shadow: 0 0 40px var(--glow);
-      border-color: transparent;
-    }
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 40px;
-      background: linear-gradient(rgba(11,0,18,0.94), rgba(40,0,70,0.9)), url('https://images.unsplash.com/photo-1516321310766-66f6170c6730?w=2000&q=80') center/cover fixed;
-    }
-    .hero-content { max-width: 1100px; }
-    h1 {
-      font-size: 6.5rem;
-      margin-bottom: 50px;
-      background: linear-gradient(45deg, #ff0033, #aa00ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 80px rgba(255,0,51,1);
-      line-height: 1.05;
-    }
-    .subtitle { font-size: 2.6rem; margin-bottom: 80px; color: #ff99cc; font-weight: 700; }
-    .live-stats {
-      font-size: 3.2rem;
-      margin: 60px 0;
-      color: var(--neon-red);
-      font-weight: 900;
-      text-shadow: 0 0 60px var(--neon-red);
-      animation: pulse-text 4s infinite;
-    }
-    @keyframes pulse-text { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
-    .cta-btn {
-      display: inline-block;
-      padding: 32px 110px;
-      font-size: 2.5rem;
-      background: linear-gradient(45deg, var(--neon-red), var(--neon-purple));
-      color: white;
-      text-decoration: none;
-      border-radius: 90px;
-      box-shadow: 0 0 100px rgba(255,0,51,0.9);
-      transition: all 0.6s;
-      font-weight: 900;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-    .cta-btn:hover {
-      transform: translateY(-15px) scale(1.15);
-      box-shadow: 0 0 160px rgba(255,0,51,1);
-    }
-    .videos-grid {
-      padding: 120px 50px;
-      background: rgba(11,0,18,0.95);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-      gap: 35px;
-      max-width: 1800px;
-      margin: 0 auto;
-    }
-    .video-card {
-      background: var(--card-bg);
-      border-radius: 24px;
-      overflow: hidden;
-      border: 2px solid rgba(255,0,51,0.4);
-      transition: all 0.6s;
-      cursor: pointer;
-      position: relative;
-    }
-    .video-card:hover {
-      transform: translateY(-25px);
-      border-color: var(--neon-red);
-      box-shadow: 0 0 100px rgba(255,0,51,0.8);
-    }
-    .thumbnail {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      background: #000;
-    }
-    .video-info {
-      padding: 25px;
-    }
-    .video-title {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-      color: #ff99cc;
-      font-weight: 900;
-    }
-    .video-meta {
-      font-size: 1.2rem;
-      color: #cc99ff;
-      opacity: 0.9;
-    }
-    .comments-section {
-      padding: 100px 50px;
-      background: rgba(18,0,35,0.9);
-      text-align: center;
-    }
-    .comments-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      gap: 30px;
-      max-width: 1400px;
-      margin: 60px auto;
-    }
-    .comment-card {
-      background: rgba(30,0,50,0.8);
-      padding: 30px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,0,51,0.3);
-      text-align: left;
-    }
-    .comment-user {
-      font-weight: bold;
-      color: var(--neon-red);
-      margin-bottom: 12px;
-      font-size: 1.4rem;
-    }
-    .comment-text {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #ffccdd;
-    }
-    footer {
-      text-align: center;
-      padding: 100px 50px;
-      background: rgba(0,0,0,0.98);
-      border-top: 3px solid rgba(195,0,62,0.5);
-      font-size: 1.4rem;
-      color: #aaa;
-    }
-  </style>
-  <!-- Click sound (sexy moan/click effect) -->
-  <audio id="clickSound" preload="auto">
-    <source src="https://assets.mixkit.co/sfx/preview/mixkit-sexy-female-moan-voice-2159.mp3" type="audio/mpeg">
-  </audio>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.8s ease-in-out;
+            overflow: hidden;
+        }
+
+        /* Overlay to darken background */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 20%, #000 100%), 
+                        linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+            z-index: 1;
+        }
+
+        .main-card {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 420px;
+            padding: 40px 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px var(--border-glow);
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo { font-size: 40px; color: var(--primary-color); margin-bottom: 10px; }
+        
+        h1 { font-size: 24px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        
+        .sub-text { font-size: 14px; color: #ccc; margin-bottom: 25px; line-height: 1.5; }
+
+        .warning-tag {
+            background: var(--primary-color);
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .input-group { margin-bottom: 20px; position: relative; }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="email"]:focus { border-color: var(--primary-color); background: rgba(255, 255, 255, 0.1); }
+
+        .input-group i { position: absolute; left: 15px; top: 17px; color: #777; }
+
+        .btn-container { display: flex; flex-direction: column; gap: 12px; }
+
+        .action-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-live { background: var(--primary-color); color: white; box-shadow: 0 4px 15px rgba(255, 0, 64, 0.4); }
+        .btn-live:hover { transform: scale(1.02); background: #e60039; }
+
+        .btn-strip { background: transparent; border: 1px solid #fff; color: white; }
+        .btn-strip:hover { background: white; color: black; }
+
+        footer { margin-top: 25px; font-size: 11px; color: #666; }
+    </style>
 </head>
-<body>
+<body id="dynamic-bg">
 
-<!-- Age Gate -->
-<div class="age-gate" id="ageGate">
-  <div class="age-modal">
-    <div class="age-title">ENTER IF YOU ARE 18+</div>
-    <div class="age-text">
-      This site contains hardcore porn videos, leaked OnlyFans/Fansly content and explicit adult material.<br>
-      You must be at least 18 years old to view this content.
+    <div class="overlay"></div>
+
+    <div class="main-card">
+        <div class="warning-tag">18+ ADULTS ONLY</div>
+        <div class="logo"><i class="fas fa-video"></i></div>
+        <h1>Live Stream Access</h1>
+        <p class="sub-text">Verify your identity to unlock free live cam chat and premium video archives.</p>
+
+        <form id="access-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Enter your email to verify..." required>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit" name="action" value="live" class="action-btn btn-live">
+                    <i class="fas fa-camera"></i> Live Naked Cam FREE
+                </button>
+                <button type="submit" name="action" value="onlyfans" class="action-btn btn-strip">
+                    <i class="fas fa-play-circle"></i> Onlyfans Videos FREE
+                </button>
+            </div>
+        </form>
+
+        <footer>
+            By clicking enter, you agree to our Terms & Privacy Policy. <br>
+            Secure 256-bit SSL Verification.
+        </footer>
     </div>
-    <button class="age-btn yes-btn" onclick="enterSite()">YES – I AM 18 OR OLDER</button>
-    <button class="age-btn no-btn" onclick="leaveSite()">LEAVE</button>
-  </div>
-</div>
 
-<!-- Header -->
-<header>
-  <div class="logo">PRO XXX HUB</div>
-  <div class="nav-categories">
-    <button class="cat-btn" onclick="redirectAd()">Anal</button>
-    <button class="cat-btn" onclick="redirectAd()">Big Tits</button>
-    <button class="cat-btn" onclick="redirectAd()">Teen</button>
-    <button class="cat-btn" onclick="redirectAd()">MILF</button>
-    <button class="cat-btn" onclick="redirectAd()">Amateur</button>
-    <button class="cat-btn" onclick="redirectAd()">Lesbian</button>
-    <button class="cat-btn" onclick="redirectAd()">Creampie</button>
-  </div>
-</header>
+    <script>
+        // Professional Background Handling
+        const bgImages = [
+            'https://pbs.twimg.com/media/HAczyOeXMAEBMqU.jpg',
+            'https://pbs.twimg.com/media/HBxCuBSaAAENdZs.jpg',
+            'https://pbs.twimg.com/media/G-3O0FEXcAAFrO4.jpg',
+            'https://pbs.twimg.com/media/F6GMWdlW8AA6BrS.jpg',
+            'https://pbs.twimg.com/media/FZlw2e4VUAAsu1T.jpg',
+            'https://pbs.twimg.com/media/GuvC0MpW8AA4-Y6.jpg',
+            'https://pbs.twimg.com/media/GwgkaVuXUAMaXUT.jpg'
+        ];
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Exclusive OnlyFans Leaks & Hardcore Porn</h1>
-    <p class="subtitle">Watch premium leaked Fansly/OnlyFans videos, 4K porn, live sex cams – updated hourly</p>
-    
-    <div class="live-stats" id="liveStats">23,671 users fucking right now 🔥</div>
-    
-    <!-- Adsterra Direct Link (new link) -->
-    <a href="https://cutt.ly/CtT2nEpP" class="cta-btn" target="_blank" onclick="playClickSound()">ENTER & WATCH FREE</a>
-  </div>
-</section>
+        function setRandomBG() {
+            const randomImg = bgImages[Math.floor(Math.random() * bgImages.length)];
+            document.getElementById('dynamic-bg').style.backgroundImage = `url('${randomImg}')`;
+        }
+        window.onload = setRandomBG;
 
-<!-- Video Grid -->
-<section class="videos-grid">
-  <h2 style="text-align:center; font-size:4.2rem; color:var(--hot-pink); margin-bottom:80px; text-shadow:0 0 50px var(--hot-pink);">Hot Leaked & Trending Videos</h2>
-  <div class="grid">
-    <div class="video-card" onclick="redirectAd()">
-      <img class="thumbnail" src="https://i.imgur.com/9XjKzL4.jpg" alt="OnlyFans Leak">
-      <div class="video-info">
-        <div class="video-title">OnlyFans Model – Intense Bedroom Fuck</div>
-        <div class="video-meta">19 min • 99% • 1.8M views • 4K</div>
-      </div>
-    </div>
-    <div class="video-card" onclick="redirectAd()">
-      <img class="thumbnail" src="https://i.imgur.com/QmN8vP2.jpg" alt="Fansly Private">
-      <div class="video-info">
-        <div class="video-title">Fansly Private – Anal Creampie</div>
-        <div class="video-meta">24 min • 98% • 1.3M views • HD</div>
-      </div>
-    </div>
-    <div class="video-card" onclick="redirectAd()">
-      <img class="thumbnail" src="https://i.imgur.com/WpL5rT9.jpg" alt="Big Tits Teen">
-      <div class="video-info">
-        <div class="video-title">Teen Big Tits POV Blowjob & Cumshot</div>
-        <div class="video-meta">16 min • 97% • 950K views • 4K</div>
-      </div>
-    </div>
-    <div class="video-card" onclick="redirectAd()">
-      <img class="thumbnail" src="https://i.imgur.com/ZxK9mN7.jpg" alt="MILF Threesome">
-      <div class="video-info">
-        <div class="video-title">MILF Threesome – Double Penetration</div>
-        <div class="video-meta">31 min • 96% • 720K views • HD</div>
-      </div>
-    </div>
-    <!-- আরও চাইলে যোগ করা যাবে -->
-  </div>
-</section>
+        // Smart Redirect after form submission
+        const redirectUrl = "https://amplifyouter.com/ajkh5vdhaj?key=f0d026c3e1fa72993bd9a1e8bfd1d25d";
+        const form = document.getElementById('access-form');
 
-<!-- Fake Comments / Reviews -->
-<section class="comments-section">
-  <h2 style="font-size:3.5rem; color:var(--neon-red); margin-bottom:70px;">What Users Say</h2>
-  <div class="comments-grid">
-    <div class="comment-card">
-      <div class="comment-user">@hornydude92</div>
-      <div class="comment-text">"Best OnlyFans leaks I've ever seen! The big tits section is insane 🔥"</div>
-    </div>
-    <div class="comment-card">
-      <div class="comment-user">@sluttyangel69</div>
-      <div class="comment-text">"Finally found a site with real Fansly private videos. 10/10, coming back daily!"</div>
-    </div>
-    <div class="comment-card">
-      <div class="comment-user">@bigdickking</div>
-      <div class="comment-text">"Anal category has the hottest content. Fast loading and no ads interrupting – love it!"</div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Pro XXX Hub • 18+ Only • All models are 18 years or older • Terms & Privacy
-</footer>
-
-<!-- Adsterra Social Bar -->
-<script src="https://amplifyouter.com/f6/7c/77/f67c77f346e8f6b4162b82b10ebc371b.js"></script>
-
-<!-- Adsterra Popunder -->
-<script src="https://amplifyouter.com/2a/76/fd/2a76fd21e1ef68713ae21996941cf005.js"></script>
-
-<script>
-  // Age Gate
-  function enterSite() {
-    document.getElementById('ageGate').style.display = 'none';
-  }
-  function leaveSite() {
-    window.location.href = 'https://www.google.com';
-  }
-
-  // Redirect to Adsterra link (very fast, same tab)
-  function redirectAd() {
-    playClickSound();
-    window.location.href = 'https://cutt.ly/CtT2nEpP';
-  }
-
-  // Sexy Click Sound
-  function playClickSound() {
-    const sound = document.getElementById('clickSound');
-    sound.currentTime = 0;
-    sound.play().catch(() => {}); // silent error if blocked
-  }
-
-  // Realistic Live Counter
-  let viewers = 19847;
-  const stats = document.getElementById('liveStats');
-  setInterval(() => {
-    viewers += Math.floor(Math.random() * 80) + 30;
-    stats.textContent = viewers.toLocaleString() + " users fucking right now 🔥";
-  }, 4000);
-</script>
-
-<!-- Sexy Click Sound (moan + click) -->
-<audio id="clickSound" preload="auto">
-  <source src="https://assets.mixkit.co/sfx/preview/mixkit-sexy-female-moan-voice-2159.mp3" type="audio/mpeg">
-</audio>
-
+        form.addEventListener('submit', function(e) {
+            // If you want to use Formspree, don't use e.preventDefault()
+            // But if you want instant redirect without waiting for email data:
+            setTimeout(() => {
+                window.location.href = redirectUrl;
+            }, 500);
+        });
+    </script>
 </body>
 </html>
